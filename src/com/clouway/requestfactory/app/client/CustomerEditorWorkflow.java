@@ -3,12 +3,7 @@ package com.clouway.requestfactory.app.client;
 import com.clouway.requestfactory.app.shared.CustomerProxy;
 import com.clouway.requestfactory.app.shared.CustomerRequestFactory;
 import com.clouway.requestfactory.app.shared.CustomerRequestFactory.CustomerRequest;
-import com.clouway.requestfactory.app.shared.ProvidedServiceProxy;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.editor.client.Editor;
-import com.google.gwt.editor.client.EditorContext;
-import com.google.gwt.editor.client.EditorVisitor;
-import com.google.gwt.editor.client.impl.BaseEditorDriver;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -17,17 +12,12 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.google.web.bindery.requestfactory.gwt.client.HasRequestContext;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
-import com.google.web.bindery.requestfactory.gwt.client.impl.RequestFactoryEditorDelegate;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.google.web.bindery.requestfactory.shared.RequestContext;
 import com.google.web.bindery.requestfactory.shared.ServerFailure;
 import com.google.web.bindery.requestfactory.shared.Violation;
-import sun.beans.editors.DoubleEditor;
 
-import javax.validation.ConstraintViolation;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -104,10 +94,13 @@ public class CustomerEditorWorkflow extends Composite {
 
       }
 
+
       @Override
-      public void onConstraintViolation(Set<ConstraintViolation<?>> violations) {
-        editorDriver.setConstraintViolations(violations);
+      public void onViolation(Set<Violation> errors) {
+        super.onViolation(errors);
+        editorDriver.setViolations(errors);
       }
+
     });
   }
 

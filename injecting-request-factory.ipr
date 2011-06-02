@@ -10,6 +10,20 @@
         <element id="gwt-compiler-output" facet="Injecting-request-factory/gwt/GWT" />
       </root>
     </artifact>
+    <artifact type="exploded-war" name="Injecting-request-factory:Web exploded">
+      <output-path>$PROJECT_DIR$/out/artifacts/Injecting_request_factory_Web_exploded</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="Injecting-request-factory/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="Injecting-request-factory" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="lib" />
+          </element>
+        </element>
+      </root>
+    </artifact>
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
@@ -203,14 +217,14 @@
   <component name="libraryTable">
     <library name="gwt-user">
       <CLASSES>
-        <root url="jar://$USER_HOME$/development/gwt-0.0.0/gwt-user.jar!/" />
-        <root url="jar://$USER_HOME$/development/gwt-0.0.0/gwt-servlet-deps.jar!/" />
-        <root url="jar://$USER_HOME$/development/gwt-0.0.0/gwt-servlet.jar!/" />
-        <root url="jar://$USER_HOME$/development/gwt-0.0.0/gwt-dev.jar!/" />
+        <root url="jar://$USER_HOME$/development/gwt-2.3.0/gwt-user.jar!/" />
+        <root url="jar://$USER_HOME$/development/gwt-2.3.0/gwt-servlet-deps.jar!/" />
+        <root url="jar://$USER_HOME$/development/gwt-2.3.0/gwt-dev.jar!/" />
+        <root url="jar://$USER_HOME$/development/gwt-2.3.0/gwt-servlet.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/development/gwt-0.0.0/gwt-user.jar!/" />
+        <root url="jar://$USER_HOME$/development/gwt-2.3.0/gwt-user.jar!/" />
       </SOURCES>
     </library>
     <library name="lib">
